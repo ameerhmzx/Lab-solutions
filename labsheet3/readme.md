@@ -10,14 +10,14 @@ Write a program that will display the kilometers driven, liters used, and consum
 After processing all the input information, the program should calculate the overall average consumption: (Hint The liters/100km is (Liters/KM driven) x 100)
 
 ### output:
-Enter the liters used (-1 to end): 57.6  
-Enter the kilometers driven: 459  
-The liters/100km for this tank was 12.5 
-Enter the liters used (-1 to end): 45.3 
-Enter the kilometers driven: 320  
-The liters/100km for this tank was 14.2 
-Enter the liters used (-1 to end): -1  
-The overall average consumption was: 13.4 
+|  Enter the liters used (-1 to end): 57.6  |
+|  Enter the kilometers driven: 459  |
+|  The liters/100km for this tank was 12.5 |
+|  Enter the liters used (-1 to end): 45.3 |
+|  Enter the kilometers driven: 320  |
+|  The liters/100km for this tank was 14.2 |
+|  Enter the liters used (-1 to end): -1  |
+|  The overall average consumption was: 13.4 |
 
 
 ## Question 2
