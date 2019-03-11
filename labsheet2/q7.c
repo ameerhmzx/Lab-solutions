@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void q7()
+void main()
 {
     int x;
     printf("Enter a number: ");
