@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void q5()
+void main()
 {
     int i;
     for (i = 1; i <= 100; i++)
