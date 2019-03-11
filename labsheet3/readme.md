@@ -9,7 +9,7 @@ As a result you have a record of the kilometers driven and liters used for each 
 Write a program that will display the kilometers driven, liters used, and consumption (in litres/100km) for each tankful.
 After processing all the input information, the program should calculate the overall average consumption: (Hint The liters/100km is (Liters/KM driven) x 100)
 
-### output should be like:
+### Sample Output:
 
 Enter the liters used (-1 to end): 57.6  
 Enter the kilometers driven: 459  
@@ -53,7 +53,7 @@ Write a C program that will determine if a department store customer has exceede
 The program should input each of these facts, calculate the new balance (initial balance + charges - credits) and determine if the new balance exceeds the credit limit. If it does, a suitable message should be displayed.
 
 
-### output should be like:
+### Sample Output:
 
 Enter account number (-1 to end): 100
 Enter initial balance: 5394.78  
@@ -81,7 +81,7 @@ Balance:  802.45
 
 A large chemical company pays its sales staff on a commission basis. They receive £200 per week plus 9% of their gross sales for that week. For example, someone who sells £5000 of chemicals in one week will earn £200 plus 9% of £5000, a total of £650. Develop a C program that will input each salesperson’s sales for the previous week, and print out their salary. Process one person’s figures at a time.
 
-### output should be like:
+### Sample Output:
 
 Enter sales in pounds (-1 to end): 5000.00  
 Salary is: 650.00   
