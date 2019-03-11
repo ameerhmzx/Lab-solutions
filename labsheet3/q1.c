@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void q1()
+void main()
 {
     float liters, km, sum = 0, i = 0;
 
