@@ -2,14 +2,17 @@
 
 ## Question 1
 
+[Source Code](./q1.c)
+
 Write a program to calculate the electricity bill. The rates of electricity per unit are
 as follow:
 
 If the units consumed are equal or less than 300,then the cost is Rs. 3/- per unit If units consumed are more than 300,then the cost is Rs. 3.5/- per unit and surcharge of 5% of bill is added
 
-[Source Code](./q1.c)
 
 ## Question 2
+
+[Source Code](./q2.c)
 
 Write a program that reads 5 marks of different subjects out of 100 from the
 keyboard and determines and displays the sum and percentile of the marks. Then print grades
@@ -28,17 +31,18 @@ and credit points on the basic of percentile as per following table:
 | D  | 1.3 | 50-54 |
 | F  | 0.0 | Less than 50 |
 
-[Source Code](./q2.c)
-
-
 ## Question 3
+
+[Source Code](./q3.c)
+
 While purchasing certain items, a discount of 10% is offered if the quantity
 purchased is more than 1000. If quantity and price per item are input through the keyboard, write
 a program to calculate the total expenses.
 
-[Source Code](./q3.c)
 
 ## Question 4
+
+[Source Code](./q4.c)
 
 A company insures its drivers in the following cases:
 
@@ -53,9 +57,9 @@ or not
 Hint: For marital status you may ask user to enter 0 for married and 1 for unmarried. You may
 ask user to enter 0 for male and 1 for female.
 
-[Source Code](./q4.c)
-
 ## Question 5 
+
+[Source Code](./q5.c)
 
 * Print numbers from 1 to 100 with increment of 1
 * Print numbers from 100 to 1 with decrement of 1
@@ -63,33 +67,33 @@ ask user to enter 0 for male and 1 for female.
 * Print sequence of numbers: 2, 5, 8, 11, 14, 17, 20
 * Print sequence of numbers: 99, 88, 77, 66, 55, 44, 33, 22, 11, 0
 
-[Source Code](./q5.c)
-
 ## Question 6
+
+[Source Code](./q6.c)
 
 Write a program that reads in five integers and then determines and prints the largest
 and smallest integers in the group. Use only the techniques you have learnt so far, and make sure
 that the program only uses three variables. (Hint: use two of the variables to hold the current
 largest and smallest integers.)
 
-[Source Code](./q6.c)
-
 ## Question 7
+
+[Source Code](./q7.c)
 
 Write a program that reads a number and determines and prints whether it is odd or
 even. (Hint: use the modulus operator. Any even number is multiple of two, and any multiple of
 two gives a remainder of zero when divided by two.)
 
-[Source Code](./q7.c)
-
 ## Question 8
+
+[Source Code](./q8.c)
 
 Write a program which asks the user to enter 10 numbers and prints out the message
 “even” if the number is even and “divisible by three” if the number is divisible by three.
 
-[Source Code](./q8.c)
-
 ## Question 9
+
+[Source Code](./q9.c)
 
 A person invests $1000.0 in a savings account yielding 5% interest. Assuming that
 all interest is left on deposit in the account, calculate and print the amount of money in he
@@ -118,5 +122,3 @@ where
 | 8 | 1477.46 |
 | 9 | 1551.33 |
 | 10 | 1628.89 |
-
-[Source Code](./q9.c)
