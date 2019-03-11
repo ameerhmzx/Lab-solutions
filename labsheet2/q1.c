@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void q1()
+void main()
 {
     int units;
     float price, rate, surch;
