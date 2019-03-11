@@ -9,16 +9,16 @@ As a result you have a record of the kilometers driven and liters used for each 
 Write a program that will display the kilometers driven, liters used, and consumption (in litres/100km) for each tankful.
 After processing all the input information, the program should calculate the overall average consumption: (Hint The liters/100km is (Liters/KM driven) x 100)
 
-### output:
-|  Enter the liters used (-1 to end): 57.6  |
-|  Enter the kilometers driven: 459  |
-|  The liters/100km for this tank was 12.5 |
-|  Enter the liters used (-1 to end): 45.3 |
-|  Enter the kilometers driven: 320  |
-|  The liters/100km for this tank was 14.2 |
-|  Enter the liters used (-1 to end): -1  |
-|  The overall average consumption was: 13.4 |
+### output should be like:
 
+Enter the liters used (-1 to end): 57.6  
+Enter the kilometers driven: 459  
+The liters/100km for this tank was 12.5 
+Enter the liters used (-1 to end): 45.3 
+Enter the kilometers driven: 320  
+The liters/100km for this tank was 14.2  
+Enter the liters used (-1 to end): -1  
+The overall average consumption was: 13.4 
 
 ## Question 2
 
@@ -52,6 +52,9 @@ Write a C program that will determine if a department store customer has exceede
 * Allowed credit limit
 The program should input each of these facts, calculate the new balance (initial balance + charges - credits) and determine if the new balance exceeds the credit limit. If it does, a suitable message should be displayed.
 
+
+### output should be like:
+
 Enter account number (-1 to end): 100
 Enter initial balance: 5394.78  
 Enter total charges: 1000  
@@ -77,6 +80,8 @@ Balance:  802.45
 [Source Code](./q6.c)
 
 A large chemical company pays its sales staff on a commission basis. They receive £200 per week plus 9% of their gross sales for that week. For example, someone who sells £5000 of chemicals in one week will earn £200 plus 9% of £5000, a total of £650. Develop a C program that will input each salesperson’s sales for the previous week, and print out their salary. Process one person’s figures at a time.
+
+### output should be like:
 
 Enter sales in pounds (-1 to end): 5000.00  
 Salary is: 650.00   
