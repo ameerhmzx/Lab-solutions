@@ -6,22 +6,27 @@
 
 Given the following piece of code
 
+```
  int i = 10;    
  char c= 'A';
  double f = 25.5;
  int *iptr = &i;
  char *cptr = &c;
+```
 
  You are expected to write the result of following statements from the output you got after running your program for the above given values. 
 
 
-| Value of i | Address of i | Value of iptr | Address of iptr | Derefrenced Value of *iptr | Size of iptr | Size of i | Value of c | Address of c | Value of cptr | Address of cptr | Derefrenced Value of *cptr |	Size of cptr | Size of c |
-|:----------:|--------------|---------------|-----------------|----------------------------|--------------|-----------|------------|--------------|---------------|-----------------|----------------------------|--------------|-----------|
+| Value of i | Address of i | Value of iptr | Address of iptr | Derefrenced Value of *iptr | Size of iptr | Size of i |
+|:----------:|--------------|---------------|-----------------|----------------------------|--------------|-----------|
+| <br><br> |  |  |  |  |  |  |
+| **Value of c** | **Address of c** | **Value of cptr** | **Address of cptr** | **Derefrenced Value of *cptr** | **Size of cptr** | **Size of c** |
+| <br><br> |  |  |  |  |  |  |
 
 
 
 						
-Note:   The format specifier for displaying address of any data item is %p
+**Note:** The format specifier for displaying address of any data item is %p
 
 
 ## Question 2
