@@ -42,7 +42,7 @@ Array of integers, named ‘arr’
 |num[0]|num[1]|num[2]|num[3]|num[4]|num[5]|num[6]|num[7]|num[8]|num[9]|
 
 Implement the following pointer notations to traverse and display the given array ‘arr’.
-1.	Printing array using array[i] notation.
+1.	Printing array using `array[i]` notation.
 2.	Printing array using ptr[i] notation.
 3.	Printing array using *(array+i) notation.
 4.	Printing array using *(ptr+i) notation.
