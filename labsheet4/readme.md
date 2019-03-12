@@ -30,8 +30,10 @@ The program should use the function calculate_charges to determine the charge fo
 [Source Code](./q4.c)
 
 Implement the following functions. The functions return a real number:  
-(a) Function celsius returns the Celsius equivalent of a Fahrenheit temperature (Hint: 0 Celsius is equal to 32 Fahrenheit and 100 Celsius is equal to 212 Fahrenheit).  
-(b) Function Fahrenheit returns the Fahrenheit equivalent of a Celsius temperature.   
+
+* Function celsius returns the Celsius equivalent of a Fahrenheit temperature (Hint: 0 Celsius is equal to 32 Fahrenheit and 100 Celsius is equal to 212 Fahrenheit).  
+* Function Fahrenheit returns the Fahrenheit equivalent of a Celsius temperature.
+
 Use these functions to write a program that prints charts showing the Fahrenheit equivalent of all Celsius temperatures between 0 and 100 degrees, and the Celsius equivalent of all Fahrenheit temperatures between 32 and 212 degrees. Print the output neatly in a table. 
 
 
