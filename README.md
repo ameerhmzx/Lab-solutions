@@ -4,7 +4,7 @@ This repository is specifically created for the students of CUI (lahore) and con
 
 This is for Learning Purpose Only. Coppied material will be considered as Cheating and may result in deduction of marks.
 
-## How can I contribute
+## How can I contribute?
 
 You can contribute to improve any this code base by:
 
@@ -13,6 +13,8 @@ You can contribute to improve any this code base by:
 * Adding Code comments
 * Proposing new / better way to solve any problem
 * adding solutions of missing problems
+
+[Learn about git/github](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
 
 ## License
 This content is provided under [MIT license](http://opensource.org/licenses/mit-license.php), which states that:
