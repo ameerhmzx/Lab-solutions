@@ -6,7 +6,7 @@
 
 Given the following piece of code
 
-```
+```c
  int i = 10;    
  char c= 'A';
  double f = 25.5;
