@@ -4,6 +4,16 @@ This repository is specifically created for the students of CUI (lahore) and con
 
 This is for Learning Purpose Only. Coppied material will be considered as Cheating and may result in deduction of marks.
 
+## How can I contribute
+
+You can contribute to improve any this code base by:
+
+* Opening issues
+* Improving reamdmes
+* Adding Code comments
+* Proposing new / better way to solve any problem
+* adding solutions of missing problems
+
 ## License
 This content is provided under [MIT license](http://opensource.org/licenses/mit-license.php), which states that:
 
