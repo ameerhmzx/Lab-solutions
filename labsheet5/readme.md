@@ -12,10 +12,10 @@ Develop a program to input the marks of 10 (ten) different subjects of a student
 
 Write a program to declare an integer array of 10 elements.
 
-A.	Write a function getArray() to get array input from the user  that will be used to initialize the first five (5) elements of the array by getting input from the user. The rest of the 5 entries would be set to zero (0).	
-B.	Write a function FindEven() to find the total numbers of even numbers in the given array. 
-C.	Write a function ModifyArray() to make the each array element to a multiple of four(04).
-D.	Write a function named ‘FindMax()’ that will find the largest element in the given array and return the largest element index no. 	
+*	Write a function getArray() to get array input from the user  that will be used to initialize the first five (5) elements of the array by getting input from the user. The rest of the 5 entries would be set to zero (0).	
+*	Write a function FindEven() to find the total numbers of even numbers in the given array. 
+*	Write a function ModifyArray() to make the each array element to a multiple of four(04).
+*	Write a function named ‘FindMax()’ that will find the largest element in the given array and return the largest element index no. 	
 
 ## Question 3
 
@@ -23,4 +23,4 @@ D.	Write a function named ‘FindMax()’ that will find the largest element in 
 
 Develop a program to calculate the basic salary of 5 employees where the hourly rate and the no. of hours worked by each employee are given by the user.
 
-Note: Formula for calculating the basic salary = no. of hours worked * hourly rate.
+**Note:** Formula for calculating the basic salary = no. of hours worked * hourly rate.
