@@ -18,7 +18,7 @@ Given the following piece of code
 
 
 | Value of i | Address of i | Value of iptr | Address of iptr | Derefrenced Value of *iptr | Size of iptr | Size of i |
-|:----------:|--------------|---------------|-----------------|----------------------------|--------------|-----------|
+|----------|--------------|---------------|-----------------|----------------------------|--------------|-----------|
 | <br><br> |  |  |  |  |  |  |
 | **Value of c** | **Address of c** | **Value of cptr** | **Address of cptr** | **Derefrenced Value of \*cptr** | **Size of cptr** | **Size of c** |
 | <br><br> |  |  |  |  |  |  |
