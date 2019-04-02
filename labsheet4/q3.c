@@ -1,72 +1,39 @@
 #include<stdio.h>
-#include<stdlib.h>
 
-float calculate_charges(float hrs);
+float calc_charges(float hours) {
+    if ((int)hours == 0)
+      return 0.0;
+    else if (hours > 0 && hours <= 3)
+      return 30.0;
+    else if (hours > 3 && hours <= 24){
+      float ch = (((hours-3)*5)+30);
+      return (ch > 100.0)? 100: ch;
+    }
+    
+    return -1;
+}
 
 int main()
 {
-    int i;
-    float hrs,hrs1,hrs2,hrs3,chrg1,chrg2,chrg3;
+    float h1, h2, h3;
+    
+    printf("Enter the number of hours for  car 1: ");
+    scanf("%f", &h1);
 
-    for(i = 1;i <= 3;i++)
-    {
-       printf("Enter number of hours for car%d: ",i);
-       scanf("%f",&hrs);
+    printf("Enter the number of hours for  car 2: ");
+    scanf("%f", &h2);
 
-       if(i == 1)
-       {
-           chrg1 = calculate_charges(hrs);
+    printf("Enter the number of hours for  car 3: ");
+    scanf("%f", &h3);
+    
+    float ttl_charges = calc_charges(h1) + calc_charges(h2) + calc_charges(h3);
 
-           hrs1 = hrs;
-       }
-
-       if(i == 2)
-       {
-           chrg2 = calculate_charges(hrs);
-
-           hrs2 = hrs;
-       }
-
-       if(i == 3)
-       {
-           chrg3 = calculate_charges(hrs);
-
-           hrs3 = hrs;
-       }
-    }
-
-    printf("car\tHours\tCharges\n");
-
-    printf("%2d\t%.1f\t%.1f\n",1,hrs1,chrg1);
-    printf("%2d\t%.1f\t%.1f\n",2,hrs2,chrg2);
-    printf("%2d\t%.1f\t%.1f\n",3,hrs3,chrg3);
-    printf("Total\t%.1f\t%.1f\n",hrs1+hrs2+hrs3,chrg1+chrg2+chrg3);
+    printf("\nCars\tHours\t\tCharges\n");
+    printf("1\t\t%.2f\t\t%.2f\n",h1,calc_charges(h1));
+    printf("2\t\t%.2f\t\t%.2f\n",h2,calc_charges(h2));
+    printf("3\t\t%.2f\t\t%.2f\n",h3,calc_charges(h3));
+    printf("Total\t%.2f\t\t%.2f\n",h1+h2+h3,ttl_charges);
 
 
-    system("pause");
     return 0;
-}
-
-float calculate_charges(float hrs)
-{
-    float chrg;
-
-    if(hrs == 0)
-      chrg = 0;
-
-    else if(hrs > 0 && hrs <= 3)
-           chrg = 2.0;
-
-    else if(hrs > 3 && hrs <= 24)
-    {
-       chrg = (((hrs - 3)*0.5)+2.0);
-
-       if(chrg > 10)
-         chrg = 10;
-
-    }
-    else
-        printf("Invalid Input !!!\n");
-
-    return chrg;
 }
