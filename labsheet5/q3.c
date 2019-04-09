@@ -1,22 +1,25 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
 
 int main()
 {
+  // Will be available soon
     int i;
-    float hrs[5],hrs_rate[5],sal;
+    float sal[5], hrs, rate;
 
     for(i = 0;i < 5;i++)
     {
         printf("Enter the number of hours worked for employee %d: ",i+1);
-        scanf("%f",&hrs[i]);
+        scanf("%f",&hrs);
 
         printf("Enter the rate per hour worked for employee %d: ",i+1);
-        scanf("%f",&hrs_rate[i]);
+        scanf("%f",&rate);
 
-        printf("The basic salary of %d employee is %.2f\n",i+1,hrs[i]*hrs_rate[i]);
+        sal[i] = hrs*rate;
     }
 
-    system("pause");
+    for(i=0; i < 5; i++){
+      printf("Basic Salary of employee %d: %.2f\n", i+1, sal[i]);
+    }
+
     return 0;
 }
