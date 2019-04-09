@@ -27,7 +27,7 @@ void getArray(int arr[]){
 
 int FindEven(int arr[]){
     int Evens = 0;
-    for(c=0; c<=SIZE; c++){
+    for(c=0; c<SIZE; c++){
         if(arr[c]%2==0){
             Evens++;
         }
@@ -36,14 +36,14 @@ int FindEven(int arr[]){
 }
 
 void Modify(int arr[]){
-    for(c=0; c<=SIZE; c++){
+    for(c=0; c<SIZE; c++){
         arr[c] *= 4;
     }
 }
 
 int FindMax(int arr[]){
     int max = 0;
-    for(c=0; c<=SIZE; c++){
+    for(c=0; c<SIZE; c++){
         max = (max<arr[c])?arr[c]:max;
     }
     return max;
