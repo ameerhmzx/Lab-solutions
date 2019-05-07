@@ -58,8 +58,17 @@ void keepAplha(void) {
   puts(newStr);
 }
 
+void printReverse(char str[], int i){
+  printf("%c", str[i]);
+  if(i != 0)
+    printReverse(str, --i);
+}
+
 void main()
 {
   strFreq();
   getStat();
+  keepAplha();
+  char str[10] = "asdff23#gh";
+  printReverse(str, 9);
 }
