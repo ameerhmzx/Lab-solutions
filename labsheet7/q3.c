@@ -69,6 +69,6 @@ void main()
   strFreq();
   getStat();
   keepAplha();
-  char str[10] = "asdff23#gh";
-  printReverse(str, 9);
+  char str[26] = "asdff23#gh";
+  printReverse(str, strlen(str) - 1);
 }
