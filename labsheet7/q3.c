@@ -43,6 +43,21 @@ void getStat(void) {
 
 }
 
+void keepAplha(void) {
+  char str[10] = "asdff23#gh";
+  char newStr[10] = "";
+  int i=0, j=0;
+
+  for(; i < strlen(str); i++){
+    if(isalpha(str[i])){
+      newStr[j] = str[i];
+      j++;
+    }
+  }
+
+  puts(newStr);
+}
+
 void main()
 {
   strFreq();
