@@ -9,7 +9,7 @@ void main()
   if(fptr==NULL)
   {
     printf("\nUnable to open/create file!!!");
-    exit(0);
+    return;
   }
 
   gets(x);
