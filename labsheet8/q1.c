@@ -2,5 +2,18 @@
 
 void main()
 {
-  // Will be available soon
+  
+  FILE *fptr = fopen("data.txt","w");
+  char x[100];
+
+  if(fptr==NULL)
+  {
+    printf("\nUnable to open file!!!");
+    exit(0);
+  }
+
+  gets(x);
+  fputs(x, fptr);
+  
+  fclose(fptr);
 }
