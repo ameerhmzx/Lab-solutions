@@ -7,7 +7,7 @@ void main()
   if(f1ptr == NULL || f2ptr == NULL)
   {
     printf("\nUnable to open/create file!!!");
-    exit(0);
+    return;
   }
   while(!feof(f1ptr)){
     fputc(fgetc(f1ptr), f2ptr);
