@@ -8,7 +8,7 @@ void main()
 
   if(fptr==NULL)
   {
-    printf("\nUnable to open file!!!");
+    printf("\nUnable to open/create file!!!");
     exit(0);
   }
 
