@@ -1,6 +1,6 @@
 # **Data Communications and Computer Networks**
 
-# Topics
+# Cheat Sheets
 
-* [Packet Tracer](Packet%20Tracer/readme.md?fileId=208107)
-* [NS2](NS2/readme.md?fileId=208130)
+* [Packet Tracer](packet_tracer.md?fileId=208107)
+* [NS2](ns2.md?fileId=208130)
