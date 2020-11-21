@@ -23,6 +23,45 @@
                               // this will become the default gateway in DHCP.
 ```
 
+## Implement Routing Protocols on Router
+
+### RIP
+
+```
+enable
+configure terminal
+router rip
+network [network_address]  # i.e. 192.168.1.0
+```
+
+> Repeat the network command for every network directly attached to the Router (don't add networks attached to other routers in the network)
+
+### EIGRP
+
+```
+enable
+configure terminal
+router eigrp [asn]         # here asn can be any number
+network [network_address] [subnet_mask]  # i.e. 192.168.1.0 255.255.255.0
+```
+
+> note: Asn should be same for all the routers who needs to form a network 
+>
+> Repeat the network command for every network directly attached to the Router (don't add networks attached to other routers in the network)
+
+### OSPF
+
+```
+enable
+configure terminal
+router ospf [asn]         # here asn can be any number
+network [network_address] [reverse_subnet]  # i.e. 192.168.1.0 0.0.0.255
+```
+
+> note: Asn should be same for all the routers who needs to form a network. Also OSPF uses reverse subnet mask. 
+>
+> Repeat the network command for every network directly attached to the Router (don't add networks attached to other routers in the network)
+
 ## Implement IP Helper on Router
 
 > Required when DHCP server is outside the network
@@ -36,6 +75,7 @@ interface [interface_name]
 ip address [ip_address] [subnet_mask]  // This ip will end up to be the 
                                        // default gateway in DHCP server
 ip helper-address [dhcp_address]       // dhcp_address is the ip address of DHCP server
+no shutdown
 ```
 
 ## DNS provision from Router's DHCP
