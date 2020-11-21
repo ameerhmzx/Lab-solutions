@@ -23,6 +23,21 @@
                               // this will become the default gateway in DHCP.
 ```
 
+## Implement IP Helper on Router
+
+> Required when DHCP server is outside the network
+>
+> Make sure to provide static IP to DHCP server before this step and also create dhcp pools on the server with Default Gateway as the IP address of the router, DNS server (optional) and starting IP.
+
+```
+enable
+configure terminal
+interface [interface_name]
+ip address [ip_address] [subnet_mask]  // This ip will end up to be the 
+                                       // default gateway in DHCP server
+ip helper-address [dhcp_address]       // dhcp_address is the ip address of DHCP server
+```
+
 ## DNS provision from Router's DHCP
 
 ```
