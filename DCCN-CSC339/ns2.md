@@ -4,14 +4,14 @@
 
 ### Variables
 
-```
+```tcl
 set var value 
 $var  # use variable with $ sign
 ```
 
 ### Loop
 
-```
+```tcl
 for {set i 0} {$i < 5} {incr i} {
     # loops for 5 times
 }
@@ -19,7 +19,7 @@ for {set i 0} {$i < 5} {incr i} {
 
 ### Arrays
 
-```
+```tcl
 set arr(0) value
 set arr(1) value
 set arr(2) value
@@ -74,7 +74,7 @@ left-down
 
 ## Boilerplate code / Template
 
-```
+```tcl
 set ns [new Simulator] 
 set nf [open out.nam w]            # update filename
 set tr [open out.tr w]             # update filename
@@ -100,36 +100,36 @@ $ns run                            # runs the simulator
 
 Creating a node & assigning it to a variable \`n1\`
 
-```
+```tcl
 set n1 [$ns node]
 ```
 
 Change node Color
 
-```
+```tcl
 $n1 color blue
 ```
 
 Change the shape of a node \`n1\`
 
-```
+```tcl
 $n1 shape circle
 ```
 
 Add label to the node \`n1\`
 
-```
+```tcl
 $n1 lable "label" 
 ```
 
 Change label color
 
-```
+```tcl
 $n1 label-color red
 ```
 
 Change label position
 
-```
+```tcl
 $n1 label-at up
 ```
