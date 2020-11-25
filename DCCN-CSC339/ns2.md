@@ -133,3 +133,68 @@ Change label position
 ```tcl
 $n1 label-at up
 ```
+
+## Links
+
+Creating duplex link between `node1` & `node2`
+
+```tcl
+$ns duplex-link $node1 $node2 $bandwidth $delay $algorithm
+```
+
+i.e.
+
+```tcl
+# creates link bw n1 & n2 will bandwidth of 100Mbps and delay of 10ms
+# using DropTail algorithm 
+$ns duplex-link $n1 $n2 100Mb 10ms DropTail
+```
+
+Changing Position of Links bw `node1` & `node2`
+
+```tcl
+ $ns duplex-link-op $node1 $node2 orient $position
+```
+
+Adding Label to Link
+
+```tcl
+$ns duplex-link-op $node1 $node2 label $label
+```
+
+Changing color of Link's label
+
+```tcl
+$ns duplex-link-op $node1 $node2 color $labelColor
+```
+
+## Queue
+
+Setting up Queue on link
+
+```tcl
+$ns queue-limit $node1 $node2 $size
+```
+
+Changing orientation of Queue
+```tcl
+# i.e. $orientation 0.5 will make it perpendicular to link
+$ns duplex-link-op $node1 $node2 queuePos $orientation
+```
+
+## Connections
+
+> TODO
+
+## Timeline
+
+```tcl
+$ns at $time "$command"
+```
+
+i.e.
+
+```tcl
+$ns at 1.5 "finish"
+```
+
