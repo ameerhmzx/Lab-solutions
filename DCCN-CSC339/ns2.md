@@ -98,7 +98,7 @@ $ns run                            # runs the simulator
 
 ## Nodes
 
-Creating a node & assigning it to a variable \`n1\`
+Creating a node & assigning it to a variable `n1`
 
 ```tcl
 set n1 [$ns node]
@@ -110,13 +110,13 @@ Change node Color
 $n1 color blue
 ```
 
-Change the shape of a node \`n1\`
+Change the shape of a node `n1`
 
 ```tcl
 $n1 shape circle
 ```
 
-Add label to the node \`n1\`
+Add label to the node `n1`
 
 ```tcl
 $n1 lable "label" 
