@@ -182,9 +182,75 @@ Changing orientation of Queue
 $ns duplex-link-op $node1 $node2 queuePos $orientation
 ```
 
-## Connections
+## Connections & Application
 
-> TODO
+Sample for Ftp over TCP from `node1` to `node2`
+
+```tcp
+set tcp [new Agent/TCP]
+$ns attach-agent $node1 $tcp
+set sink [new Agent/TCPSink]
+$ns attach-agent $node2 $sink
+$ns connect $tcp $sink
+
+# Setup connection color
+$ns color 1 red
+$tcp set fid_ 1
+
+# setup of FTP OVER TCP CONNECTION
+set ftp [new Application/FTP]
+$ftp attach-agent $tcp
+$ftp set type_ FTP
+```
+
+Sample for CBR (Constant Bit Rate) over UDP from `node1` to `node2` with rate `4Mbps`
+
+```tcp
+set udp [new Agent/UDP] 
+$ns attach-agent $node1 $udp 
+set null [new Agent/Null] 
+$ns attach-agent $node2 $null 
+$ns connect $udp $null 
+
+# Setup connection color
+$ns color 2 blue
+$tcp set fid_ 2
+
+set cbr [new Application/Traffic/CBR] 
+$cbr attach-agent $udp 
+$cbr set type_ CBR 
+$cbr set packet_size_ 1024
+$cbr set rate_ 4mb
+$cbr set random_ false 
+```
+### Routing Protocols
+
+#### Distance vertor routing protocol
+
+```tcl
+$ns rtproto DV
+```
+
+#### Open Link State protocol
+
+```tcl
+$ns rtproto LS
+```
+
+Setting cost on link from `node1` to `node2`
+
+```tcl
+# $cost is a number
+$ns cost $node1 $node2 $cost
+```
+
+# Changing Link state at time
+
+Sample
+```tcl
+$ns rtmodel-at 2.0 down $n2 $n3
+$ns rtmodel-at 2.7 up $n2 $n3
+```
 
 ## Timeline
 
@@ -198,3 +264,27 @@ i.e.
 $ns at 1.5 "finish"
 ```
 
+## XGraph
+
+Sample
+
+```tcl
+for {set a 0} {$a < 2} {incr a} {
+    set f$a [open out$a.tr w]
+}
+proc record {} {
+    global sink null f0 f1
+    set ns [Simulator instance]
+    set time 0.5
+    set now [$ns now]
+    set bw0 [$sink set bytes_]
+    set bw1 [$sink set bytes_]
+    puts $f0 "$now [expr $bw0/$time*8/1000000]"
+    puts $f1 "$now [expr $bw1/$time*8/1000000]"
+    $sink set bytes_ 0
+    $sink set bytes_ 0
+    $ns at [expr $now+$time] "record"
+}
+# add to Timeline
+$ns at 0.0 "record"
+```
