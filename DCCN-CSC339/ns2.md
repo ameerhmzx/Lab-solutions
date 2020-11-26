@@ -223,15 +223,15 @@ $cbr set packet_size_ 1024
 $cbr set rate_ 4mb
 $cbr set random_ false 
 ```
-### Routing Protocols
+## Routing Protocols
 
-#### Distance vertor routing protocol
+### Distance vertor routing protocol
 
 ```tcl
 $ns rtproto DV
 ```
 
-#### Open Link State protocol
+### Open Link State protocol
 
 ```tcl
 $ns rtproto LS
@@ -244,7 +244,7 @@ Setting cost on link from `node1` to `node2`
 $ns cost $node1 $node2 $cost
 ```
 
-# Changing Link state at time
+### Changing Link state at time
 
 Sample
 ```tcl
