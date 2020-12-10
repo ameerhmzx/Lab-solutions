@@ -293,3 +293,23 @@ proc record {} {
 $ns at 0.0 "record"
 ```
 > __info:__ Use UDP `LossMonitor` Agent instead of `Null` Agent if you want to moniter that connection on XGraph.
+
+### Finish procedure for xgraph
+
+Sample
+
+```tcl
+proc finish {} {
+global ns nf tf f0 f1
+$ns flush-trace
+close $nf
+close $tf
+#close xgraph files
+close $f0
+close $f1
+exec nam out.nam &
+#execute xgraph files
+exec xgraph out0.tr out1.tr -geometry 800x400 &
+exit 0
+}
+```
