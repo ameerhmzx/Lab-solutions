@@ -282,11 +282,11 @@ proc record {} {
     set time 0.5
     set now [$ns now]
     set bw0 [$sink set bytes_]
-    set bw1 [$sink set bytes_]
+    set bw1 [$null set bytes_]
     puts $f0 "$now [expr $bw0/$time*8/1000000]"
     puts $f1 "$now [expr $bw1/$time*8/1000000]"
     $sink set bytes_ 0
-    $sink set bytes_ 0
+    $null set bytes_ 0
     $ns at [expr $now+$time] "record"
 }
 # add to Timeline
@@ -300,16 +300,16 @@ Sample
 
 ```tcl
 proc finish {} {
-global ns nf tf f0 f1
-$ns flush-trace
-close $nf
-close $tf
-#close xgraph files
-close $f0
-close $f1
-exec nam out.nam &
-#execute xgraph files
-exec xgraph out0.tr out1.tr -geometry 800x400 &
-exit 0
+    global ns nf tf f0 f1
+    $ns flush-trace
+    close $nf
+    close $tf
+    #close xgraph files
+    close $f0
+    close $f1
+    exec nam out.nam &
+    #execute xgraph files
+    exec xgraph out0.tr out1.tr -geometry 800x400 &
+    exit 0
 }
 ```
