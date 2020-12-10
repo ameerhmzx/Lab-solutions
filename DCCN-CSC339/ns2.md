@@ -292,3 +292,4 @@ proc record {} {
 # add to Timeline
 $ns at 0.0 "record"
 ```
+> __info:__ Use UDP `LossMonitor` Agent instead of `Null` Agent if you want to minoter that connection on XGraph.
