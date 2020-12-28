@@ -176,3 +176,20 @@ no shutdown
 ```
 > note: don't forget to trunk the interface to other vtp switches
 
+
+## InterVLAN Routing
+
+### Router on a Stick method
+
+> node: make sure you have vlan setup and router's link to switch is in trunk mode
+
+```
+  enable
+  configure terminal
+  interface [interface].[n]                     // [interface] i.e. fastEthernet0/0
+                                                // [n] should be a number
+                                                // example: fa0/0.1
+  encapsulation dot1Q [v]                       // [v] is the number of vlan 
+                                                // which is going to hold this interface
+  ip address [ip] [subnet_mask]                 // provide ip to the gateway of this sub-interface 
+```
