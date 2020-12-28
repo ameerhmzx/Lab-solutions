@@ -179,8 +179,8 @@ show run # show all configuratin
   
   interface range [starting_interface] - [ending_interface]  // select interfaces you want to include in vlan
                                                              // you can also use `interface [interface]` to include only one interface
-  switchport mode access                                    // mode can be [access, trunk] 
-  switchport access vlan [n]                                       // [n] should be a number. 
+  switchport mode access                                     // mode can be [access, trunk] 
+  switchport access vlan [n]                                 // [n] should be a number. 
 ```
 
 ### Trunk an Interface of Switch
