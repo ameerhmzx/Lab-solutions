@@ -10,20 +10,9 @@
                                         // [subnet_mask] i.e. 255.255.255.0
 ```
 
-## Implement DHCP from Router
+# Routing Protocols
 
-```
-  enable
-  configure terminal
-  ip dhcp pool [pool_name]    // [pool_name] can be any unique name.
-  network [networks_ip]       // [networks_ip] is the network you want to associate 
-                              // this DHCP with i.e. 192.168.10.0.
-  default-router [router_ip]  // [router_ip] shoud be the ip address of the router, 
-                              // don't forget to assign ip to your router's port
-                              // this will become the default gateway in DHCP.
-```
-
-## Implement Routing Protocols on Router
+## Implement Dynamic Routing Protocols on Router
 
 ### RIP
 
@@ -62,6 +51,21 @@ network [network_address] [reverse_subnet]  # i.e. 192.168.1.0 0.0.0.255
 >
 > Repeat the network command for every network directly attached to the Router (don't add networks attached to other routers in the network)
 
+# DHCP & DNS
+
+## Implement DHCP from Router
+
+```
+  enable
+  configure terminal
+  ip dhcp pool [pool_name]    // [pool_name] can be any unique name.
+  network [networks_ip]       // [networks_ip] is the network you want to associate 
+                              // this DHCP with i.e. 192.168.10.0.
+  default-router [router_ip]  // [router_ip] shoud be the ip address of the router, 
+                              // don't forget to assign ip to your router's port
+                              // this will become the default gateway in DHCP.
+```
+
 ## Implement IP Helper on Router
 
 > Required when DHCP server is outside the network
@@ -87,17 +91,21 @@ no shutdown
   dns-server [dns_server_ip]  // [dns_server_ip] should provide dns services.
 ```
 
+# VOIP
+
 ## Implement Vlan on Switch for VOIP
 
 ```
   enable
   configure terminal
   interface range [starting_interface] - [ending_interface]  // interfaces on which IP phones are connected.
-  switch-port mode access
-  switch-port voice vlan [n]                                 // [n] should be a number. 
+  switchport mode access
+  switchport voice vlan [n]                                 // [n] should be a number. 
 ```
 
 ## Implement VOIP on Router
+
+> note: only use 2811 router 
 
 ```
   enable
@@ -123,3 +131,50 @@ no shutdown
     phone in the network
   ]
 ```
+
+# VLAN
+
+## Create VLAN on Switch
+
+```
+  enable
+  configure terminal
+  vlan [n]                        // n should be a number
+  name [name]                     // name of vlan
+  exit
+```
+
+## Bind VLAN with interface on Switch 
+
+```
+  enable
+  configure terminal
+  
+  interface range [starting_interface] - [ending_interface]  // select interfaces you want to include in vlan
+                                                             // you can also use `interface [interface]` to include only one interface
+  switchport mode access                                    // mode can be [access, trunk] 
+  switchport vlan [n]                                       // [n] should be a number. 
+```
+
+## Trunk an Interface of Switch
+
+```
+  enable
+  configure terminal
+  interface [interface]                                      // or you can select range using 
+                                                             // interface range [starting_interface] - [ending_interface]
+  switchport mode trunk                                   
+```
+
+# VTP
+
+## Implementing VTP Domain 
+
+```
+  enable
+  configure terminal
+  vtp domain [domain_name]                           // domain can be any unique name or address i.e. CS
+  vtp mode [mode]                                    // mode can be [server, client, transparent]
+```
+> note: don't forget to trunk the interface to other vtp switches
+
