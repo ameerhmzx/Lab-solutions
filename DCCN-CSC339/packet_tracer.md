@@ -80,9 +80,9 @@ no network [network_address] [reverse_subnet]  # i.e. 192.168.1.0 0.0.0.255
 ```
   enable
   configure terminal
-  ip dhcp pool [pool_name]    // [pool_name] can be any unique name.
-  network [networks_ip]       // [networks_ip] is the network you want to associate 
-                              // this DHCP with i.e. 192.168.10.0.
+  ip dhcp pool [pool_name]       // [pool_name] can be any unique name.
+  network [networks_ip] [mask]   // [networks_ip] is the network you want to associate 
+                                 // this DHCP with i.e. 192.168.10.0. [mask] i.e., 255.255.255.0
   default-router [router_ip]  // [router_ip] shoud be the ip address of the router, 
                               // don't forget to assign ip to your router's port
                               // this will become the default gateway in DHCP.
