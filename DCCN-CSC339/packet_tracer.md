@@ -156,6 +156,11 @@ no shutdown
 
 ## VLAN
 
+```
+show vlan # to show vlan configuration
+show run # show all configuratin
+```
+
 ### Create VLAN on Switch
 
 ```
