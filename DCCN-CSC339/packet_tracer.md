@@ -10,7 +10,8 @@
                                         // [subnet_mask] i.e. 255.255.255.0
 ```
 
-## Routing Protocols
+## Dynamic Routing Protocols
+> static routing can be setup from the GUI
 
 ### RIP
 
