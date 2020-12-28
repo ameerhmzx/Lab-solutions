@@ -1,6 +1,6 @@
 # Packet Tracer Cheat Sheet
 
-## Assign an IP address to any Interface
+### Assign an IP address to any Interface
 
 ```
   enable
@@ -10,9 +10,7 @@
                                         // [subnet_mask] i.e. 255.255.255.0
 ```
 
-# Routing Protocols
-
-## Implement Dynamic Routing Protocols on Router
+## Routing Protocols
 
 ### RIP
 
@@ -51,9 +49,9 @@ network [network_address] [reverse_subnet]  # i.e. 192.168.1.0 0.0.0.255
 >
 > Repeat the network command for every network directly attached to the Router (don't add networks attached to other routers in the network)
 
-# DHCP & DNS
+## DHCP & DNS
 
-## Implement DHCP from Router
+### Implement DHCP from Router
 
 ```
   enable
@@ -66,7 +64,7 @@ network [network_address] [reverse_subnet]  # i.e. 192.168.1.0 0.0.0.255
                               // this will become the default gateway in DHCP.
 ```
 
-## Implement IP Helper on Router
+### Implement IP Helper on Router
 
 > Required when DHCP server is outside the network
 >
@@ -82,7 +80,7 @@ ip helper-address [dhcp_address]       // dhcp_address is the ip address of DHCP
 no shutdown
 ```
 
-## DNS provision from Router's DHCP
+### DNS provision from Router's DHCP
 
 ```
   enable
@@ -91,9 +89,9 @@ no shutdown
   dns-server [dns_server_ip]  // [dns_server_ip] should provide dns services.
 ```
 
-# VOIP
+## VOIP
 
-## Implement Vlan on Switch for VOIP
+### Implement Vlan on Switch for VOIP
 
 ```
   enable
@@ -103,7 +101,7 @@ no shutdown
   switchport voice vlan [n]                                 // [n] should be a number. 
 ```
 
-## Implement VOIP on Router
+### Implement VOIP on Router
 
 > note: only use 2811 router 
 
@@ -132,9 +130,9 @@ no shutdown
   ]
 ```
 
-# VLAN
+## VLAN
 
-## Create VLAN on Switch
+### Create VLAN on Switch
 
 ```
   enable
@@ -144,7 +142,7 @@ no shutdown
   exit
 ```
 
-## Bind VLAN with interface on Switch 
+### Bind VLAN with interface on Switch 
 
 ```
   enable
@@ -156,7 +154,7 @@ no shutdown
   switchport vlan [n]                                       // [n] should be a number. 
 ```
 
-## Trunk an Interface of Switch
+### Trunk an Interface of Switch
 
 ```
   enable
@@ -166,9 +164,9 @@ no shutdown
   switchport mode trunk                                   
 ```
 
-# VTP
+## VTP
 
-## Implementing VTP Domain 
+### Implementing VTP Domain 
 
 ```
   enable
