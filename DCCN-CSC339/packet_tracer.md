@@ -24,6 +24,14 @@ network [network_address]  # i.e. 192.168.1.0
 
 > Repeat the network command for every network directly attached to the Router (don't add networks attached to other routers in the network)
 
+```
+# to remove RIP
+no router rip
+
+# to remove network
+no network [network_address] # i.e. 192.168.1.0
+```
+
 ### EIGRP
 
 ```
@@ -37,6 +45,14 @@ network [network_address] [subnet_mask]  # i.e. 192.168.1.0 255.255.255.0
 >
 > Repeat the network command for every network directly attached to the Router (don't add networks attached to other routers in the network)
 
+```
+# to remove EIGRP
+no router eigrp [asn]
+
+# to remove network
+no network [network_address] [subnet_mask]  # i.e. 192.168.1.0 255.255.255.0
+```
+
 ### OSPF
 
 ```
@@ -49,6 +65,13 @@ network [network_address] [reverse_subnet]  # i.e. 192.168.1.0 0.0.0.255
 > note: Asn should be same for all the routers who needs to form a network. Also OSPF uses reverse subnet mask. 
 >
 > Repeat the network command for every network directly attached to the Router (don't add networks attached to other routers in the network)
+```
+# to remove OSPF
+router ospf [asn] 
+
+# to remove network
+no network [network_address] [reverse_subnet]  # i.e. 192.168.1.0 0.0.0.255
+```
 
 ## DHCP & DNS
 
