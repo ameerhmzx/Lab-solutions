@@ -169,7 +169,7 @@ $ns duplex-link-op $node1 $node2 label $label
 Changing color of Link's label
 
 ```tcl
-$ns duplex-link-op $node1 $node2 color $labelColor
+$ns duplex-link-op $node1 $node2 label-color $labelColor
 ```
 
 ## Queue
